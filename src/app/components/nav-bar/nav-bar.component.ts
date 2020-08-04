@@ -1,6 +1,5 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { images } from 'src/assets/images';
-import {selectImage} from 'src/app/app.component'
 
 @Component({
   selector: 'app-nav-bar',
@@ -9,14 +8,11 @@ import {selectImage} from 'src/app/app.component'
 })
 export class NavBarComponent implements OnInit {
   images: Image[] = images; 
-  selectedImage: any = 1;
+  @Input() selectImage: any;
+  @Input() toggleFilter: any;
+
 
   constructor() { }
-
-  selectImage(i): void {
-    console.log(i)
-    this.selectedImage = i;
-  }
 
   ngOnInit(): void {
   }

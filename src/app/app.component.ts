@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-challenge';
+  selectedImage: number = 0;
+  showAll: boolean = true;
 
+  selectImage = (i): any => {
+    console.log(i)
+    this.selectedImage = i;
+  }
+
+  toggleFilter = (): any => {
+    this.showAll = !this.showAll;
+    console.log(this.showAll)
+  }
 }

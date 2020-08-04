@@ -1,6 +1,5 @@
 <nav>
     <h1>Title</h1>
     <p *ngFor="let element of images; let i = index" [image]="images[i]" (click)="selectImage(i)">{{i + 1}}</p>
-    <p [image]="images">all</p>
-
+    <p [image]="images" (click)="toggleFilter(i)">all</p>
 </nav>
