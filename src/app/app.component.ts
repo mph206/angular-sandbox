@@ -9,22 +9,14 @@ import { images, Image } from 'src/assets/images';
 })
 export class AppComponent {
   title = 'angular-challenge';
-  showAll: boolean = true;
   images: any = images; 
-  selectedImage = this.images;
-
+  selectedImages = this.images;
 
   selectImage = (i): any => {
-    console.log(i)
-    this.selectedImage = [this.images[i]];
-    console.log(this.selectedImage)
+    this.selectedImages = [this.images[i]];
   }
 
   toggleFilter = (): any => {
-    this.selectedImage = this.images;
-    // this.showAll = true;
-    console.log(this.selectedImage)
-    console.log(this.images)
-
+    this.selectedImages = this.images;
   }
 }

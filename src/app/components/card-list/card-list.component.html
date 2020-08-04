@@ -1,9 +1,4 @@
-<!-- <main *ngIf="selectedImage; else displayAll"> -->
-    <!-- <app-card [image]="selectedImage"></app-card> -->
-    
-
-    <!-- <ng-template #displayAll> -->
-        <app-card *ngFor="let element of selectedImage; let i = index" [image]="selectedImage[i]"></app-card>
-    <!-- </ng-template> -->
+<main>
+        <app-card *ngFor="let element of selectedImages; let i = index" [image]="selectedImages[i]"></app-card>
     <p>{{selectedImage}}</p>
-<!-- </main> -->
+</main>

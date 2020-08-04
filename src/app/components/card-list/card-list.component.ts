@@ -7,11 +7,7 @@ import { images, Image } from 'src/assets/images';
   styleUrls: ['./card-list.component.scss']
 })
 export class CardListComponent implements OnInit {
-  // images: Image[] = images; 
-  @Input() selectedImage: any;
-  @Input() showAll: boolean;
-  @Input() images: Image[];
-
+  @Input() selectedImages: Image[];
 
   constructor() { }
 
