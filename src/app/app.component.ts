@@ -1,4 +1,6 @@
 import { Component, } from '@angular/core';
+import { images, Image } from 'src/assets/images';
+
 
 @Component({
   selector: 'app-root',
@@ -7,16 +9,22 @@ import { Component, } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-challenge';
-  selectedImage: number = 0;
   showAll: boolean = true;
+  images: any = images; 
+  selectedImage = this.images;
+
 
   selectImage = (i): any => {
     console.log(i)
-    this.selectedImage = i;
+    this.selectedImage = [this.images[i]];
+    console.log(this.selectedImage)
   }
 
   toggleFilter = (): any => {
-    this.showAll = !this.showAll;
-    console.log(this.showAll)
+    this.selectedImage = this.images;
+    // this.showAll = true;
+    console.log(this.selectedImage)
+    console.log(this.images)
+
   }
 }
